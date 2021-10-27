@@ -44,7 +44,6 @@ def verify_competitors():
                 else:
                     time.sleep(10)
                     print('Verificam din nou')
-      verify_competitors()
 #         for u_name in user_names:
 #             user_names_array.append(u_name.contents[0].strip())
 #             print(u_name.contents[0].strip())
