@@ -30,14 +30,14 @@ def verify_competitors():
         parse_page = BeautifulSoup(user_ad.content, 'html.parser')
         user_names = parse_page.select('a.adPage__aside__stats__owner__login')
         for i in range(len(user_names)):
-            print(user_names[i])
-            if(user_names[0].strip() == 'rentcalianmd'):
+            print(user_names[i].contents[0])
+            if(user_names[0].contents[0].strip() == 'rentcalianmd'):
                 time.sleep(10)
                 verify_competitors()
                 print('Rentcalian e nambar oan')
             else:
-                if(user_names[i] == 'vinzarionline' or user_names[i] == 'aaandreiii' or user_names[i] == 'pislaru-888' or user_names[i] == 'rentinthecapital' or user_names[i] == 'smoke-lab-md'):
-                    if(user_names[i-1] != 'rentcalianmd'):
+                if(user_names[i].contents[0] == 'vinzarionline' or user_names[i].contents[0] == 'aaandreiii' or user_names[i].contents[0] == 'pislaru-888' or user_names[i].contents[0] == 'rentinthecapital' or user_names[i].contents[0] == 'smoke-lab-md'):
+                    if(user_names[i-1].contents[0] != 'rentcalianmd'):
                         kill_competitors()
                     else:
                         time.sleep(10)
