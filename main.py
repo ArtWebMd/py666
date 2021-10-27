@@ -36,7 +36,7 @@ def verify_competitors():
                 verify_competitors()
                 print('Rentcalian e nambar oan')
             else:
-                if(user_names[i] == 'vinzarionline' || user_names[i] == 'aaandreiii' || user_names[i] == 'pislaru-888' || user_names[i] == 'rentinthecapital' || user_names[i] == 'smoke-lab-md'):
+                if(user_names[i] == 'vinzarionline' or user_names[i] == 'aaandreiii' or user_names[i] == 'pislaru-888' or user_names[i] == 'rentinthecapital' or user_names[i] == 'smoke-lab-md'):
                     if(user_names[i-1] != 'rentcalianmd'):
                         kill_competitors()
                     else:
